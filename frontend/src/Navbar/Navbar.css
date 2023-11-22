@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   padding: 16px;
-  box-shadow: 0px 1px 3px -2px black;
+  box-shadow: 0px 1px 3px -1px black;
 }
 
 .nav-logo {
@@ -73,4 +73,7 @@ nav p {
   background-color: red;
   color: whitesmoke;
 }
+
+
+
 

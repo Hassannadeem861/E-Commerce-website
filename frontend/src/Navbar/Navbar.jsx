@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom'
 // import { GlobalContext } from '../ContextApis/Context';
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
@@ -17,14 +18,14 @@ const Navbar = () => {
         <p>SHOPPING</p>
       </nav>
       <ui className="nav-menu">
-        <li onClick={() => {setMenu("Shop")}}>Shop {menu === "Shop" ? <hr/> : <></>} </li>
-        <li onClick={() => {setMenu("mens")}}>Men {menu === "mens" ? <hr/>  : <></>}</li>
-        <li onClick={() => {setMenu("womans")}}>Woman {menu === "womans" ? <hr/> : <></>}</li>
-        <li onClick={() => {setMenu("kids")}}>Kids {menu === "kids" ? <hr/>  : <></>}</li>
+        <li onClick={() => {setMenu("Shop")}}><Link to="/">Shop</Link> {menu === "Shop" ? <hr/> : <></>} </li>
+        <li onClick={() => {setMenu("mens")}}><Link to="/mens">Men</Link> {menu === "mens" ? <hr/>  : <></>}</li>
+        <li onClick={() => {setMenu("womans")}}><Link to="/womans">Woman</Link> {menu === "womans" ? <hr/> : <></>}</li>
+        <li onClick={() => {setMenu("kids")}}><Link to="/kids">Kids</Link> {menu === "kids" ? <hr/>  : <></>}</li>
       </ui>
       <div className="nav-login-cart">
-        <Button variant="contained">Login</Button>
-        <img src={cart_icon} type="cart_icon"></img>
+        <Link to="/login"><Button variant="contained">Login</Button></Link>
+        <Link to="/cart"><img src={cart_icon} alt="logo"></img></Link>
         <div className="nav-cart-count">0</div>
       </div>
     </div>
